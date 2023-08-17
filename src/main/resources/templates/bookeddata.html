@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Booked Car History</title>
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            
+            background-image: url("http://images.alphacoders.com/667/667966.png");
+            background-size: cover;
+        }
+
+        .history-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="history-container">
+        <h1>Booked Car History</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>User Email</th>
+                    <th>Car Model</th>
+                    <th>Car Number</th>
+                    <th>Number of Days</th>
+                    <th>Booked Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="booking : ${userbookings}">
+                    <td th:text="${booking.useremail}"></td>
+                    <td th:text="${booking.carmodel}"></td>
+                    <td th:text="${booking.carnumber}"></td>
+                    <td th:text="${booking.numberofdays}"></td>
+                    <td th:text="${booking.bookeddate}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

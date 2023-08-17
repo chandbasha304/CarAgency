@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Cars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url("https://wallpapercave.com/wp/wp1898166.jpg");
+            background-size: cover;
+            
+            
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+        
+        
+         .rent-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available Cars</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Vehicle Model</th>
+                <th>Vehicle Number</th>
+                <th>Seating Capacity</th>
+                <th>Rent per Day</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="car : ${cars}">
+                <td th:text="${car.vehiclemodel}"></td>
+                <td th:text="${car.vehiclenumber}"></td>
+                <td th:text="${car.seatingcapacity}"></td>
+                <td th:text="${car.rentperday}"></td>
+             <form  th:action="@{/loginprocess}" method="gett">
+               
+				    <td><button class="rent-button" >Rent Car</button></td>
+				    
+			   </form>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

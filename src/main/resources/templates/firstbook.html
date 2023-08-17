@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Rent Car</title>
+    <style>
+        /* Your styles here */
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            
+            background-image: url("https://images4.alphacoders.com/590/thumb-1920-590571.jpg");
+            background-size: cover;
+        }
+
+        .form-container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Rent Car</h1>
+        <form action="bookcarprocess" method="post">
+            <!-- Hidden input fields to pass data to the backend -->
+            <input type="hidden" th:name="carmodel" th:value="${carmodel}" />
+            <input type="hidden" th:name="carnumber" th:value="${carnumber}" />
+              <input type="hidden" th:name="customeremail" th:value="${mail}" />
+
+            <!-- Rest of your form inputs -->
+            <label for="days">Number of Days</label>
+            <select id="days" name="days">
+                <option value="1">1 day</option>
+                <option value="2">2 days</option>
+                <option value="3">3 days</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="startdate">Start Date</label>
+            <input type="date" id="startdate" name="startdate" required>
+
+            <button type="submit">Rent Car</button>
+        </form>
+    </div>
+</body>
+</html>

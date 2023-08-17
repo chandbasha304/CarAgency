@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Owner Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            
+            background-image: url("https://www.worldatlas.com/r/w1200/upload/33/9f/f4/shutterstock-719811544.jpg");
+            background-size: cover;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            display: block;
+            margin: auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Login</h1>
+        <form action="customersignin" method="post">
+            <label for="owneremail">Email:</label>
+            <input type="email" id="owneremail" name="customermail" placeholder="Enter Your Email" required>
+            <label for="ownerpassword">Password:</label>
+            <input type="password" id="ownerpassword" name="customerpassword"  placeholder="Enter Your Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://blog.travelcarma.com/wp-content/uploads/2017/06/car-rental-banner.jpg");
+    background-size: cover;
+  }
+
+  h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .options button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 180px;
+    transition: background-color 0.3s;
+  }
+
+  .options button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+</style>
+<title>Car Rental Agency</title>
+</head>
+<body>
+  <h1>Car Rental Agency</h1>
+  <div class="options">
+    <form action="loginprocess" method="get">
+      <button>Login</button>
+    </form>
+    <form action="registerprocess" method="get">
+      <button>Register</button>
+    </form>
+    <form action="displaycars" method="post">
+      <button>View Cars</button>
+    </form>
+  </div>
+</body>
+</html>

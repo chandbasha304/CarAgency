@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            
+            background-image: url("https://i.pinimg.com/originals/98/55/0a/98550aa42911d41b20be33343d9c44c9.jpg");
+            background-size: cover;
+        }
+
+        .top-bar {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .top-bar h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        .nav-options {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-button, .view-button {
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .nav-button {
+            background-color: #007bff;
+        }
+
+        .view-button {
+            background-color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <h1>Owner SignIn</h1>
+        <div class="nav-options">
+            <form action="addingcars" method="get">
+                <button class="nav-button">Add Cars</button>
+            </form>
+            <form action="bookedcarhistory" method="post">
+                <button class="view-button">View Booked Cars</button>
+            </form>
+            <form action="car" method="get">
+                <button class="nav-button" onclick="return logout()">Logout</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Content goes here -->
+
+</body>
+<script>
+    function logout() {
+        var ab = confirm("Are You Sure You Want to Logout");
+        return ab;
+    }
+</script>
+</html>

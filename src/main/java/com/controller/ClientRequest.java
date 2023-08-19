@@ -1,7 +1,7 @@
 package com.controller;
 
 import java.util.List;
-
+import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +17,7 @@ import com.service.OwnerService;
 
 import jakarta.servlet.http.HttpServletRequest;
 
-@RestController
+@Controller
 public class ClientRequest {
 
 
